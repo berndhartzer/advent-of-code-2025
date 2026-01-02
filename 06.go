@@ -56,13 +56,13 @@ func daySixPartOne(input []string) int {
 
 func daySixPartTwo(input []string) int {
 	operators := strings.Fields(input[len(input)-1])
-	opIdx := len(operators)-1
+	opIdx := len(operators) - 1
 
 	newNum := ""
 	total := 0
 	colTotal := 0
 
-	for col := len(input[0])-1; col >= 0; col-- {
+	for col := len(input[0]) - 1; col >= 0; col-- {
 		for row := 0; row < len(input)-1; row++ {
 			if input[row][col] == ' ' {
 				continue

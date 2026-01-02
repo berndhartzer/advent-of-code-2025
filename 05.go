@@ -126,7 +126,7 @@ func dayFivePartTwo(input []string) int {
 
 	total := 0
 	for _, idRange := range merged {
-		total += (idRange[1]-idRange[0]) + 1
+		total += (idRange[1] - idRange[0]) + 1
 	}
 
 	return total

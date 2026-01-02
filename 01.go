@@ -15,7 +15,7 @@ func dayOnePartOne(input []string) int {
 			panic("could not convert str to number")
 		}
 
-		move := n%100
+		move := n % 100
 
 		switch line[0] {
 		case 'L':
@@ -27,7 +27,7 @@ func dayOnePartOne(input []string) int {
 		case 'R':
 			pos += move
 			if pos > 99 {
-				pos = pos-100
+				pos = pos - 100
 			}
 		}
 
@@ -49,8 +49,8 @@ func dayOnePartTwo(input []string) int {
 			panic("could not convert str to number")
 		}
 
-		move := n%100
-		zeros += (n/100)
+		move := n % 100
+		zeros += (n / 100)
 
 		startedOnZero := false
 		if pos == 0 {
@@ -71,7 +71,7 @@ func dayOnePartTwo(input []string) int {
 			pos += move
 			if pos > 99 {
 				hitZero = true
-				pos = pos-100
+				pos = pos - 100
 			}
 		}
 

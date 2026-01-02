@@ -57,7 +57,7 @@ func dayFour(input [][]byte) (int, [][]byte) {
 				}
 
 				if x > 0 {
-					if input [y+1][x-1] == '@' {
+					if input[y+1][x-1] == '@' {
 						adjacent++
 					}
 				}
@@ -110,7 +110,6 @@ func dayFourPartTwo(input []string) int {
 		}
 
 		inputBytes = updated
-
 
 	}
 	return total

@@ -23,7 +23,7 @@ func dayThreePartOne(input []string) int {
 
 			firstIdx = i
 
-			for j := i+1; j < len(line); j++ {
+			for j := i + 1; j < len(line); j++ {
 				c := line[j]
 
 				if secondIdx <= i {
@@ -38,7 +38,7 @@ func dayThreePartOne(input []string) int {
 			}
 
 			candidate := int(line[firstIdx]-'0') * 10
-			candidate += int(line[secondIdx]-'0')
+			candidate += int(line[secondIdx] - '0')
 
 			if candidate > highest {
 				highest = candidate
@@ -53,13 +53,15 @@ func dayThreePartOne(input []string) int {
 
 // greedy algorithm
 // For i from 1 to k:
-//     remaining = k - (i-1) # how many digits we still need (including current)
-//     latest_possible_index = n - remaining
-//     search from current_position to latest_possible_index
-//     find the maximum digit in that range
-//     pick the leftmost one if there are ties
-//     append it to answer
-//     set current_position = that_index + 1
+//
+//	remaining = k - (i-1) # how many digits we still need (including current)
+//	latest_possible_index = n - remaining
+//	search from current_position to latest_possible_index
+//	find the maximum digit in that range
+//	pick the leftmost one if there are ties
+//	append it to answer
+//	set current_position = that_index + 1
+//
 // End for
 func largestKDigits(s string, k int) string {
 	n := len(s)

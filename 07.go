@@ -1,8 +1,8 @@
 package aoc
 
 import (
-	"strings"
 	"fmt"
+	"strings"
 )
 
 func daySevenPartOne(input []string) int {
