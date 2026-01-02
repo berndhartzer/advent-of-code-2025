@@ -2,7 +2,6 @@ package aoc
 
 import (
 	"fmt"
-	"strings"
 )
 
 func daySevenPartOne(input []string) int {
